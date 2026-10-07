@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://apur26.pharmakaksha.com/">
+<meta property="og:site_name" content="Pharmakaksha">
+<meta property="og:image" content="https://apur26.pharmakaksha.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Pharmakaksha hall-ticket card: Crack the Pharmacy CBT, make the 12:1 list. Exam 03 Dec 2026, 150 MCQs, 180 min, +3/−1.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://apur26.pharmakaksha.com/">
 <meta property="og:title" content="Pharmakaksha · AP Assistant Professor (Pharmacy) CBT batch">
 <meta property="og:description" content="Live online classes, full-length mock CBTs and notes for the APPSC Assistant Professor Pharmacy test on 3 Dec 2026.">
 <link rel="icon" href="logo.jpg">
@@ -66,13 +74,18 @@ a{color:var(--navy)}
 .perf::before{left:-11px}.perf::after{right:-11px}
 .countdown{padding:18px 20px 22px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
 .cd{display:flex;gap:10px}
-.cd div{display:flex;flex-direction:column;align-items:center;min-width:58px}
+.cd div{display:flex;flex-direction:column;align-items:center;min-width:52px}
 .cd b{font:600 1.9rem/1 var(--mono);font-variant-numeric:tabular-nums}
 .cd span{font:600 .65rem/1.6 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#1f8f55;color:#fff;font:700 1rem/1 var(--body);padding:14px 20px;border-radius:999px;text-decoration:none;border:0;cursor:pointer}
 .btn:hover{filter:brightness(1.08)}
 .btn svg{width:20px;height:20px;fill:currentColor}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn.ghost svg{fill:none;stroke:currentColor;stroke-width:2}
+.btn.icon{padding:12px;flex:none}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.sticky .cta{flex-wrap:nowrap;flex:none;gap:8px}
 
 /* Facts strip */
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
@@ -149,8 +162,50 @@ details ul{margin:0 0 16px;padding-left:20px;color:var(--muted);display:flex;fle
 .sticky-in{max-width:760px;width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .sticky-in span{font-size:.9rem;color:var(--muted);line-height:1.3}
 .sticky-in span b{color:var(--ink);font-family:var(--mono);font-variant-numeric:tabular-nums}
-@media (max-width:420px){.sticky-in span{font-size:.8rem}.sticky .btn{padding:12px 16px}}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:420px){.sticky-in span{font-size:.8rem}.sticky .btn{padding:12px 16px}.sticky .btn.icon{padding:12px}}
+/* Index bar */
+html{scroll-behavior:smooth}
+section{scroll-margin-top:76px}
+.toc{position:sticky;top:0;z-index:6;background:var(--paper);margin:0 -16px;padding:10px 16px;border-bottom:1px solid var(--line)}
+.toc ol{list-style:none;margin:0;padding:0;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.toc ol::-webkit-scrollbar{display:none}
+.toc a{display:flex;align-items:center;gap:7px;white-space:nowrap;text-decoration:none;font:600 .9rem/1 var(--body);color:var(--ink);padding:9px 13px;border:1.5px solid var(--line);border-radius:999px;background:var(--card)}
+.toc a span{font:600 .72rem/1 var(--mono);color:var(--gold)}
+.toc a[aria-current="true"]{background:var(--navy);color:var(--navy-ink);border-color:var(--navy)}
+.toc a[aria-current="true"] span{color:inherit}
+
+/* Sub-blocks inside a section */
+.block{display:flex;flex-direction:column;gap:14px;margin-top:14px}
+.block > h3{font-size:1.3rem}
+
+/* Study plan */
+.legend{font-size:.95rem;color:var(--muted)}
+.legend .tag{margin:0 6px 0 0}
+.plan{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.plan .phase{font:600 .75rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding:14px 0 2px}
+.day{display:grid;grid-template-columns:72px 1fr;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.day .dt{display:flex;flex-direction:column;gap:2px;font-family:var(--mono);font-variant-numeric:tabular-nums}
+.day .dt b{font:600 1.6rem/1 var(--mono)}
+.day .dt span{font:600 .68rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.day .bd{display:flex;flex-direction:column;gap:8px;min-width:0}
+.day ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:6px 14px}
+.day li{padding-left:14px;position:relative;line-height:1.35}
+.day li::before{content:"";position:absolute;left:0;top:.5em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.day .bd .tag{margin:0;align-self:flex-start}
+.day.mock{background:var(--navy);border-color:var(--navy);color:var(--navy-ink)}
+.day.mock .dt span,.day.mock p{color:inherit;opacity:.85}
+.day.mock h3{font-size:1.2rem}
+.day.rest{background:transparent;border-style:dashed;padding-block:8px}
+.day.rest .dt b{font-size:1.1rem}
+.day.rest .bd{justify-content:center;color:var(--muted);font-size:.92rem}
+.day.gap{background:transparent;border:1.5px dashed var(--gold)}
+.day.gap .dt b{font-size:1rem;line-height:1.2}
+.day.gap .tba{align-self:flex-start}
+.day.exam{border:1.5px solid var(--gold);background:var(--gold-soft)}
+.day.today{outline:3px solid var(--gold);outline-offset:2px}
+.now{font:600 .68rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:#1a1405;padding:4px 7px;border-radius:6px;align-self:flex-start}
+@media (max-width:420px){.day{grid-template-columns:58px 1fr;gap:12px;padding:12px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -180,83 +235,119 @@ details ul{margin:0 0 16px;padding-left:20px;color:var(--muted);display:flex;fle
         <div><b id="cd-d">--</b><span>days</span></div>
         <div><b id="cd-h">--</b><span>hrs</span></div>
         <div><b id="cd-m">--</b><span>min</span></div>
+        <div><b id="cd-s">--</b><span>sec</span></div>
       </div>
       <a class="btn wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.2 1.4Z"/></svg>Join on WhatsApp</a>
     </div>
   </article>
 
-  <!-- Why now -->
-  <section aria-labelledby="why">
-    <span class="eyebrow">The opportunity</span>
-    <h2 id="why">Regular posts, one common test</h2>
+  <!-- Index: sticky chip bar, highlights the section in view -->
+  <nav class="toc" aria-label="On this page">
+    <ol>
+      <li><a href="#about"><span>A</span>About us</a></li>
+      <li><a href="#exam"><span>B</span>The exam</a></li>
+      <li><a href="#provide"><span>C</span>What we provide</a></li>
+      <li><a href="#topics"><span>D</span>Topics</a></li>
+      <li><a href="#plan"><span>E</span>Study plan</a></li>
+      <li><a href="#enrol"><span>→</span>Join</a></li>
+    </ol>
+  </nav>
+
+  <!-- A. About -->
+  <section id="about" aria-labelledby="about-h">
+    <span class="eyebrow">A · About us</span>
+    <h2 id="about-h">Pharmakaksha: a classroom for pharmacy exams</h2>
+    <p><em>Kaksha</em> means classroom. Pharmakaksha is a pharmacy exam-prep platform that teaches for the exam in front of you: focused topics, regular testing and honest feedback on where you stand.</p>
+    <p class="lead">This batch has one goal: to get you through the APPSC Pharmacy computer-based test with a score high enough to make the 12:1 shortlist.</p>
+    <p class="note">Free course notebooks: <a href="https://learn.pharmakaksha.com">learn.pharmakaksha.com</a></p>
+  </section>
+
+  <!-- B. Exam -->
+  <section id="exam" aria-labelledby="exam-h">
+    <span class="eyebrow">B · About the exam</span>
+    <h2 id="exam-h">Regular posts, one common test</h2>
+    <p class="lead">APPSC runs a single computer-based test (CBT) for Assistant Professor posts across AP's state universities. Pharmacy is on 3 December 2026, forenoon session.</p>
     <div class="facts">
       <div class="fact"><b>19</b><span>AP universities recruiting through one APPSC test</span></div>
       <div class="fact"><b>14</b><span>Pharmacy posts at Andhra University (10) and SVU (4)</span></div>
       <div class="fact"><b>Level 10</b><span>Pay ₹57,700 – ₹1,82,400 (AP pay matrix)</span></div>
     </div>
-    <p class="lead">Where a subject has more than 12 eligible applicants per vacancy, the CBT decides who goes forward. Your CBT marks set your rank, so clearing the cut-off is only the first goal.</p>
-  </section>
 
-  <!-- Score calculator -->
-  <section aria-labelledby="calc-h">
-    <span class="eyebrow">Try it</span>
-    <h2 id="calc-h">What will your attempt score?</h2>
-    <p class="lead">Move the sliders to see your marks under the +3 / −1 rule and whether you clear your category's qualifying mark.</p>
-    <div class="calc">
-      <div class="row">
-        <label for="att">Questions attempted <output id="att-o">110</output></label>
-        <input type="range" id="att" min="0" max="150" value="110">
-      </div>
-      <div class="row">
-        <label for="cor">Answered correctly <output id="cor-o">70</output></label>
-        <input type="range" id="cor" min="0" max="110" value="70">
-      </div>
-      <div class="row">
-        <span style="font-weight:600">Category</span>
-        <div class="seg" role="group" aria-label="Category">
-          <button type="button" data-q="0.40" aria-pressed="true">General · 40%</button>
-          <button type="button" data-q="0.35" aria-pressed="false">OBC · 35%</button>
-          <button type="button" data-q="0.30" aria-pressed="false">SC / ST / PBD · 30%</button>
+    <div class="block">
+      <h3>Who can apply</h3>
+      <p>B.Pharm, registration as a pharmacist and a first-class M.Pharm, as per the AU and SVU corrigenda for Pharmacy.</p>
+    </div>
+
+    <div class="block">
+      <h3>Selection process</h3>
+      <p class="lead">Where a subject has more than 12 eligible applicants per vacancy, the CBT decides who goes forward. Your CBT marks set your rank, so clearing the cut-off is only the first goal.</p>
+      <ol class="steps">
+        <li class="here"><span class="n">1</span><div><h3>Screening test (CBT) <span class="tag">This course</span></h3><p>150 MCQs in 180 minutes, conducted by APPSC on 3 December. Qualifying marks: 40% General, 35% OBC, 30% SC/ST/PBD.</p></div></li>
+        <li><span class="n">2</span><div><h3>12:1 shortlist</h3><p>Ranked on CBT marks per vacancy and category. Ties go to the older candidate.</p></div></li>
+        <li><span class="n">3</span><div><h3>Academic and research score</h3><p>The university's Screening-cum-Evaluation Committee validates your academic and research record.</p></div></li>
+        <li><span class="n">4</span><div><h3>4:1 interview list</h3><p>Shortlisted on the committee's merit list. If several universities shortlist you, you declare your preference order within 5 days.</p></div></li>
+        <li><span class="n">5</span><div><h3>Interview</h3><p>Conducted by each university for its shortlisted candidates.</p></div></li>
+      </ol>
+    </div>
+
+    <div class="block">
+      <h3 id="calc-h">What will your attempt score?</h3>
+      <p class="lead">Move the sliders to see your marks under the +3 / −1 rule and whether you clear your category's qualifying mark.</p>
+      <div class="calc">
+        <div class="row">
+          <label for="att">Questions attempted <output id="att-o">110</output></label>
+          <input type="range" id="att" min="0" max="150" value="110">
+        </div>
+        <div class="row">
+          <label for="cor">Answered correctly <output id="cor-o">70</output></label>
+          <input type="range" id="cor" min="0" max="110" value="70">
+        </div>
+        <div class="row">
+          <span style="font-weight:600">Category</span>
+          <div class="seg" role="group" aria-label="Category">
+            <button type="button" data-q="0.40" aria-pressed="true">General · 40%</button>
+            <button type="button" data-q="0.35" aria-pressed="false">OBC · 35%</button>
+            <button type="button" data-q="0.30" aria-pressed="false">SC / ST / PBD · 30%</button>
+          </div>
+        </div>
+        <div class="result" aria-live="polite">
+          <div class="score"><span id="sc">170</span><small> / 450</small></div>
+          <div><div class="verdict" id="vd">Below the cut-off</div><div class="note" id="vd2"></div></div>
+          <div class="meter" aria-hidden="true"><i id="bar"></i><u id="cut"></u></div>
+          <div class="meter-lab"><span>0</span><span id="cut-l">Cut-off 180</span><span>450</span></div>
         </div>
       </div>
-      <div class="result" aria-live="polite">
-        <div class="score"><span id="sc">170</span><small> / 450</small></div>
-        <div><div class="verdict" id="vd">Below the cut-off</div><div class="note" id="vd2"></div></div>
-        <div class="meter" aria-hidden="true"><i id="bar"></i><u id="cut"></u></div>
-        <div class="meter-lab"><span>0</span><span id="cut-l">Cut-off 180</span><span>450</span></div>
+    </div>
+
+    <div class="block">
+      <h3 id="guess-h">When is a guess worth it?</h3>
+      <p class="lead">With four options, a blind guess earns nothing on average. Rule out even one option and every guess starts paying. We train elimination on every mock.</p>
+      <div class="guess">
+        <div class="g"><div class="bubbles"><span>A</span><span>B</span><span>C</span><span>D</span></div><span>Blind guess (1 in 4)</span><b>±0.00 per guess</b></div>
+        <div class="g"><div class="bubbles"><span class="x">A</span><span>B</span><span>C</span><span>D</span></div><span>One option ruled out (1 in 3)</span><b class="pos">+0.33 per guess</b></div>
+        <div class="g"><div class="bubbles"><span class="x">A</span><span>B</span><span class="x">C</span><span>D</span></div><span>Two ruled out (1 in 2)</span><b class="pos">+1.00 per guess</b></div>
       </div>
+      <p class="note">Assumes four options per question. Expected marks = 3 × P(correct) − 1 × P(wrong).</p>
     </div>
   </section>
 
-  <!-- Guessing -->
-  <section aria-labelledby="guess-h">
-    <span class="eyebrow">Exam strategy</span>
-    <h2 id="guess-h">When is a guess worth it?</h2>
-    <p class="lead">With four options, a blind guess earns nothing on average. Rule out even one option and every guess starts paying. We train elimination on every mock.</p>
-    <div class="guess">
-      <div class="g"><div class="bubbles"><span>A</span><span>B</span><span>C</span><span>D</span></div><span>Blind guess (1 in 4)</span><b>±0.00 per guess</b></div>
-      <div class="g"><div class="bubbles"><span class="x">A</span><span>B</span><span>C</span><span>D</span></div><span>One option ruled out (1 in 3)</span><b class="pos">+0.33 per guess</b></div>
-      <div class="g"><div class="bubbles"><span class="x">A</span><span>B</span><span class="x">C</span><span>D</span></div><span>Two ruled out (1 in 2)</span><b class="pos">+1.00 per guess</b></div>
+  <!-- C. What we provide -->
+  <section id="provide" aria-labelledby="inc-h">
+    <span class="eyebrow">C · What we provide</span>
+    <h2 id="inc-h">Inside the batch</h2>
+    <div class="incl">
+      <div class="inc"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4"/></svg><h3>Daily tests</h3><p>12 questions every day on that day's four topics: one easy, one medium and one difficult question from each.</p></div>
+      <div class="inc"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M7 14h2M11 14h2M15 14h2M7 17h2M11 17h2"/></svg><h3>Weekly tests</h3><p>A test each week on the topics covered that week, so nothing slips.</p></div>
+      <div class="inc"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="2"/><circle cx="12" cy="7" r="2"/><circle cx="18" cy="7" r="2"/><circle cx="6" cy="15" r="2"/><circle cx="12" cy="15" r="2"/><circle cx="18" cy="15" r="2"/></svg><h3>Mock tests</h3><p>Five full-length CBTs set to APPSC guidelines on an APPSC-style interface: 150 questions, 180 minutes, +3 / −1.</p></div>
+      <div class="inc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h9l3 3v12H8z"/><path d="M5 6v15h11"/><path d="M11 9h6M11 12h6M11 15h4"/></svg><h3>PYQP</h3><p>Previous-year question papers to practise the exam's style and level.</p></div>
+      <div class="inc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg><h3>Study notes</h3><p>Compact notes for each topic, written to revise from quickly.</p></div>
+      <div class="inc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h12v8H8l-4 3v-3H3z"/><path d="M15 9h6v8h-1v3l-4-3h-5v-4"/></svg><h3>One-to-one interaction</h3><p>Talk to faculty one to one about your doubts and how your preparation is going.</p></div>
     </div>
-    <p class="note">Assumes four options per question. Expected marks = 3 × P(correct) − 1 × P(wrong).</p>
   </section>
 
-  <!-- Selection path -->
-  <section aria-labelledby="path-h">
-    <span class="eyebrow">Selection process</span>
-    <h2 id="path-h">From CBT to interview</h2>
-    <ol class="steps">
-      <li class="here"><span class="n">1</span><div><h3>Screening test (CBT) <span class="tag">This course</span></h3><p>150 MCQs in 180 minutes, conducted by APPSC on 3 December. Qualifying marks: 40% General, 35% OBC, 30% SC/ST/PBD.</p></div></li>
-      <li><span class="n">2</span><div><h3>12:1 shortlist</h3><p>Ranked on CBT marks per vacancy and category. Ties go to the older candidate.</p></div></li>
-      <li><span class="n">3</span><div><h3>Academic and research score</h3><p>The university's Screening-cum-Evaluation Committee validates your academic and research record.</p></div></li>
-      <li><span class="n">4</span><div><h3>4:1 interview list</h3><p>Shortlisted on the committee's merit list. If several universities shortlist you, you declare your preference order within 5 days.</p></div></li>
-      <li><span class="n">5</span><div><h3>Interview</h3><p>Conducted by each university for its shortlisted candidates.</p></div></li>
-    </ol>
-  </section>
-
-  <!-- Subjects -->
-  <section aria-labelledby="sub-h">
-    <span class="eyebrow">What we cover</span>
+  <!-- D. Topics -->
+  <section id="topics" aria-labelledby="sub-h">
+    <span class="eyebrow">D · Topics</span>
     <h2 id="sub-h">Subject-wise preparation</h2>
     <p class="lead">Core B.Pharm and M.Pharm subjects, taught for MCQ speed. Tap a subject to see its topics.</p>
     <div class="subjects">
@@ -270,15 +361,13 @@ details ul{margin:0 0 16px;padding-left:20px;color:var(--muted);display:flex;fle
     <p class="note">Check the official syllabus for your subject on the recruitment portal. We map every class to it.</p>
   </section>
 
-  <!-- Includes -->
-  <section aria-labelledby="inc-h">
-    <span class="eyebrow">What you get</span>
-    <h2 id="inc-h">Inside the batch</h2>
-    <div class="incl">
-      <div class="inc"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M10 8l4 2-4 2z"/></svg><h3>Live classes</h3><p>Subject-wise live sessions online, with recordings to revise later.</p></div>
-      <div class="inc"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="7" r="2"/><circle cx="12" cy="7" r="2"/><circle cx="18" cy="7" r="2"/><circle cx="6" cy="15" r="2"/><circle cx="12" cy="15" r="2"/><circle cx="18" cy="15" r="2"/></svg><h3>Full-length mock CBTs</h3><p>150 questions, 180 minutes, +3 / −1 marking, just like the real test.</p></div>
-      <div class="inc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg><h3>PDF notes and PYQs</h3><p>Compact notes for each subject plus previous-year questions.</p></div>
-    </div>
+  <!-- E. Study plan (rows are built from PLAN in the script) -->
+  <section id="plan" aria-labelledby="plan-h">
+    <span class="eyebrow">E · Study plan</span>
+    <h2 id="plan-h">Day by day, 20 Oct to 30 Nov</h2>
+    <p class="lead">Four topics and a daily test every day, then five full-length mock CBTs in the final stretch before the exam.</p>
+    <p class="legend"><span class="tag">Daily test</span> 12 questions: 3 from each topic (1 easy, 1 medium, 1 difficult).</p>
+    <ol class="plan" id="plan-list"></ol>
   </section>
 
   <!-- Batch -->
@@ -294,7 +383,8 @@ details ul{margin:0 0 16px;padding-left:20px;color:var(--muted);display:flex;fle
         <div><small>Weeks to exam</small><strong id="weeks"></strong></div>
       </div>
       <p class="lead">Join the Pharmakaksha WhatsApp channel for batch updates, enrolment details and free practice questions.</p>
-      <div><a class="btn wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.2 1.4Z"/></svg>Join on WhatsApp</a></div>
+      <div class="cta"><a class="btn wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.2 1.4Z"/></svg>Join on WhatsApp</a>
+        <a class="btn ghost share" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>Share with a friend</a></div>
     </div>
   </section>
 
@@ -306,7 +396,7 @@ details ul{margin:0 0 16px;padding-left:20px;color:var(--muted);display:flex;fle
 <div class="sticky" role="region" aria-label="Enrol">
   <div class="sticky-in">
     <span>Pharmacy CBT in <b id="st-d">--</b> days</span>
-    <a class="btn wa" href="#" target="_blank" rel="noopener">Join on WhatsApp</a>
+    <div class="cta"><a class="btn ghost icon share" href="#" target="_blank" rel="noopener" aria-label="Share this page on WhatsApp" title="Share on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg></a><a class="btn wa" href="#" target="_blank" rel="noopener">Join on WhatsApp</a></div>
   </div>
 </div>
 
@@ -315,10 +405,13 @@ details ul{margin:0 0 16px;padding-left:20px;color:var(--muted);display:flex;fle
 const CONFIG = {
   fee: "",            // e.g. "₹4,999"
   offer: "",          // e.g. "Early-bird ₹3,999 till 31 Oct"
-  batchStart: "",     // e.g. "20 Oct 2026"
+  batchStart: "20 Oct 2026",
   timings: "",        // e.g. "Mon–Sat, 7–9 PM"
   whatsapp: "https://www.whatsapp.com/channel/0029VbDs5dyIN9ipjEeNYg3x",
-  exam: "2026-12-03T09:30:00+05:30"
+  exam: "2026-12-03T09:30:00+05:30",
+  url: "https://apur26.pharmakaksha.com/",
+  shareText: "APPSC Assistant Professor (Pharmacy) CBT is on 3 Dec 2026. Pharmakaksha's batch has daily tests, 5 full-length mock CBTs and a day-by-day plan:",
+  cfAnalyticsToken: ""  // Cloudflare Web Analytics token; leave "" to turn analytics off
 };
 
 const $ = id => document.getElementById(id);
@@ -327,16 +420,26 @@ $("fee").innerHTML = CONFIG.fee ? CONFIG.fee + (CONFIG.offer ? ` <span class="tb
 $("start").innerHTML = tba(CONFIG.batchStart);
 $("timing").innerHTML = tba(CONFIG.timings);
 document.querySelectorAll("a.wa").forEach(a => a.href = CONFIG.whatsapp);
+document.querySelectorAll("a.share").forEach(a => a.href = "https://wa.me/?text=" + encodeURIComponent(CONFIG.shareText + " " + CONFIG.url));
+
+// 12. Privacy-friendly analytics: no cookies, no personal data. Loads only on the live site.
+if (CONFIG.cfAnalyticsToken && location.hostname === new URL(CONFIG.url).hostname) {
+  const b = document.createElement("script");
+  b.defer = true; b.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  b.dataset.cfBeacon = JSON.stringify({ token: CONFIG.cfAnalyticsToken });
+  document.head.appendChild(b);
+}
 
 const examAt = Date.parse(CONFIG.exam);
 function tick(){
   let ms = Math.max(0, examAt - Date.now());
-  const d = Math.floor(ms / 864e5), h = Math.floor(ms / 36e5) % 24, m = Math.floor(ms / 6e4) % 60;
+  const d = Math.floor(ms / 864e5), h = Math.floor(ms / 36e5) % 24, m = Math.floor(ms / 6e4) % 60, s = Math.floor(ms / 1e3) % 60;
   $("cd-d").textContent = d; $("cd-h").textContent = String(h).padStart(2, "0"); $("cd-m").textContent = String(m).padStart(2, "0");
+  $("cd-s").textContent = String(s).padStart(2, "0");
   $("st-d").textContent = d;
   $("weeks").textContent = Math.ceil(ms / (7 * 864e5)) + " weeks";
 }
-tick(); setInterval(tick, 30000);
+tick(); setInterval(tick, 1000);
 
 let q = 0.40;
 const att = $("att"), cor = $("cor");
@@ -360,6 +463,67 @@ document.querySelectorAll(".seg button").forEach(b => b.addEventListener("click"
   q = +b.dataset.q; calc();
 }));
 calc();
+
+/* ===== Study plan. One entry per row, in order. =====
+   { phase: "..." }                         section label
+   { date: "YYYY-MM-DD", topics: [ ... ] }  topic day (shows the daily-test tag)
+   { from: "...", to: "...", note: "..." }  stretch whose schedule is not published yet
+   { date: "YYYY-MM-DD", mock: 1 }          full-length mock CBT
+   { date: "YYYY-MM-DD" }                   no scheduled test
+   { date: "YYYY-MM-DD", exam: true }       exam day                              */
+const PLAN_START = "2026-10-20";
+const PLAN = [
+  { phase: "Phase 1 · Topics + daily test" },
+  { date: "2026-10-20", topics: ["Solubility terms", "Posology", "Staining techniques", "Principles of cell injury and adaptations"] },
+  { date: "2026-10-21", topics: ["Selection of indicators in titrations", "Processing problems in tablet manufacturing", "Fundamentals of general pharmacology", "Leaf constants in pharmacognosy"] },
+  { date: "2026-10-22", topics: ["Named reactions", "HLB scale", "Pathophysiology of common diseases", "Licenses for sale, manufacture and import"] },
+  { date: "2026-10-23", topics: ["Woodward–Fieser rules", "Phase rule", "Mechanism of action of antibiotics", "Enzymes; co-enzymes"] },
+  { from: "2026-10-24", to: "2026-11-21", note: "Daily topics for these days" },
+  { phase: "Phase 2 · Full-length mock CBTs" },
+  { date: "2026-11-22", mock: 1 },
+  { date: "2026-11-23" },
+  { date: "2026-11-24", mock: 2 },
+  { date: "2026-11-25" },
+  { date: "2026-11-26", mock: 3 },
+  { date: "2026-11-27" },
+  { date: "2026-11-28", mock: 4 },
+  { date: "2026-11-29" },
+  { date: "2026-11-30", mock: 5 },
+  { phase: "Exam" },
+  { date: "2026-12-03", exam: true }
+];
+
+const ist = d => new Date(d + "T00:00:00+05:30");
+const fmt = (d, o) => ist(d).toLocaleDateString("en-IN", { timeZone: "Asia/Kolkata", ...o });
+const dayNo = d => Math.round((ist(d) - ist(PLAN_START)) / 864e5) + 1;
+const todayIST = new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" });
+const dt = d => `<div class="dt"><b>${fmt(d, { day: "2-digit" })}</b><span>${fmt(d, { month: "short" })} · ${fmt(d, { weekday: "short" })}</span>${d < "2026-12-01" ? `<span>Day ${dayNo(d)}</span>` : ""}</div>`;
+
+$("plan-list").innerHTML = PLAN.map(r => {
+  if (r.phase) return `<li class="phase">${r.phase}</li>`;
+  if (r.from) return `<li class="day gap"><div class="dt"><b>${fmt(r.from, { day: "2-digit", month: "short" })} –<br>${fmt(r.to, { day: "2-digit", month: "short" })}</b><span>Day ${dayNo(r.from)}–${dayNo(r.to)}</span></div><div class="bd"><span>${r.note}</span><span class="tba">TBA</span></div></li>`;
+  const now = r.date === todayIST ? `<span class="now">Today</span>` : "";
+  const cls = r.date === todayIST ? " today" : "";
+  if (r.exam) return `<li class="day exam${cls}">${dt(r.date)}<div class="bd">${now}<h3>Pharmacy CBT</h3><p>APPSC screening test · FN 09:30–12:30 · 150 MCQs</p></div></li>`;
+  if (r.mock) return `<li class="day mock${cls}">${dt(r.date)}<div class="bd">${now}<h3>Mock test ${r.mock}</h3><p>Full-length CBT as per APPSC guidelines, on an APPSC-style interface</p></div></li>`;
+  if (r.topics) return `<li class="day${cls}">${dt(r.date)}<div class="bd">${now}<ul>${r.topics.map(t => `<li>${t}</li>`).join("")}</ul><span class="tag">Daily test · 12 Qs</span></div></li>`;
+  return `<li class="day rest${cls}">${dt(r.date)}<div class="bd">${now}No scheduled test</div></li>`;
+}).join("");
+// The plan rows shift the page after load, so re-land on a #section link.
+if (location.hash) document.querySelector(location.hash)?.scrollIntoView({ behavior: "instant" });
+
+// Index: mark the chip for the section currently in view.
+const chips = [...document.querySelectorAll(".toc a")];
+const spy = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  chips.forEach(c => {
+    const on = c.hash === "#" + e.target.id;
+    c.setAttribute("aria-current", on);
+    if (on) { const ol = c.closest("ol"), cr = c.getBoundingClientRect(), or = ol.getBoundingClientRect();
+      if (cr.left < or.left || cr.right > or.right) ol.scrollBy({ left: cr.left - or.left - 8 }); }
+  });
+}), { rootMargin: "-40% 0px -55% 0px" });
+chips.forEach(c => { const t = document.querySelector(c.hash); if (t) spy.observe(t); });
 </script>
 </body>
 </html>
