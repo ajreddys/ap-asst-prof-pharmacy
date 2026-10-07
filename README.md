@@ -57,4 +57,4 @@ WhatsApp and Telegram show a preview card when the link is shared. To add an ima
 | `CNAME` | The custom domain `apur26.pharmakaksha.com` |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are |
 
-Exam facts come from the APPSC web note dated 05.10.2026 and the AU, SVU and SPMVV recruitment notifications. Recheck them if APPSC updates the schedule.
+Exam facts come from the APPSC web note dated 05.10.2026 and the AP state universities' recruitment notifications. Pharmacy posts: AU 10, Krishna 6, ANU 4, Adikavi Nannaya 4, SVU 4, SKU 1 (29). Recheck them if APPSC updates the schedule.

@@ -174,6 +174,14 @@ section{scroll-margin-top:76px}
 .toc a[aria-current="true"]{background:var(--navy);color:var(--navy-ink);border-color:var(--navy)}
 .toc a[aria-current="true"] span{color:inherit}
 
+/* Posts by university */
+.posts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.posts li{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:baseline}
+.posts span{font-weight:600;line-height:1.3}
+.posts small{font-weight:400;color:var(--muted);font-size:.85rem;white-space:nowrap}
+.posts b{font:600 1.15rem var(--mono);font-variant-numeric:tabular-nums}
+.posts i{grid-column:1/-1;height:6px;border-radius:999px;background:linear-gradient(90deg,var(--navy) var(--w),var(--line) var(--w))}
+
 /* Sub-blocks inside a section */
 .block{display:flex;flex-direction:column;gap:14px;margin-top:14px}
 .block > h3{font-size:1.3rem}
@@ -269,8 +277,21 @@ section{scroll-margin-top:76px}
     <p class="lead">APPSC runs a single computer-based test (CBT) for Assistant Professor posts across AP's state universities. Pharmacy is on 3 December 2026, forenoon session.</p>
     <div class="facts">
       <div class="fact"><b>19</b><span>AP universities recruiting through one APPSC test</span></div>
-      <div class="fact"><b>14</b><span>Pharmacy posts at Andhra University (10) and SVU (4)</span></div>
+      <div class="fact"><b>29</b><span>Pharmacy posts across 6 universities</span></div>
       <div class="fact"><b>Level 10</b><span>Pay ₹57,700 – ₹1,82,400 (AP pay matrix)</span></div>
+    </div>
+
+    <div class="block">
+      <h3>Pharmacy posts by university</h3>
+      <ol class="posts">
+          <li><span>Andhra University <small>Visakhapatnam</small></span><b>10</b><i style="--w:100%"></i></li>
+          <li><span>Krishna University <small>Machilipatnam</small></span><b>6</b><i style="--w:60%"></i></li>
+          <li><span>Acharya Nagarjuna University <small>Guntur</small></span><b>4</b><i style="--w:40%"></i></li>
+          <li><span>Adikavi Nannaya University <small>Rajamahendravaram</small></span><b>4</b><i style="--w:40%"></i></li>
+          <li><span>Sri Venkateswara University <small>Tirupati</small></span><b>4</b><i style="--w:40%"></i></li>
+          <li><span>Sri Krishnadevaraya University <small>Anantapur</small></span><b>1</b><i style="--w:10%"></i></li>
+      </ol>
+      <p class="note">29 posts in total. Check each university's notification for its category-wise break-up.</p>
     </div>
 
     <div class="block">
@@ -389,7 +410,7 @@ section{scroll-margin-top:76px}
   </section>
 
   <footer class="src">
-    Exam details are from the APPSC web note dated 05.10.2026 and the Andhra University, SVU and SPMVV recruitment notifications (2026). Always confirm dates on the APPSC and university websites. Pharmakaksha is an independent coaching brand and is not affiliated with APPSC or any university.
+    Exam details are from the APPSC web note dated 05.10.2026 and the 2026 recruitment notifications of the AP state universities. Always confirm dates on the APPSC and university websites. Pharmakaksha is an independent coaching brand and is not affiliated with APPSC or any university.
   </footer>
 </div>
 
@@ -411,7 +432,7 @@ const CONFIG = {
   exam: "2026-12-03T09:30:00+05:30",
   url: "https://apur26.pharmakaksha.com/",
   shareText: "APPSC Assistant Professor (Pharmacy) CBT is on 3 Dec 2026. Pharmakaksha's batch has daily tests, 5 full-length mock CBTs and a day-by-day plan:",
-  cfAnalyticsToken: ""  // Cloudflare Web Analytics token; leave "" to turn analytics off
+  cfAnalyticsToken: "23b3d0f0f896468faae551ca8b3fbcc0"  // Cloudflare Web Analytics; "" turns it off
 };
 
 const $ = id => document.getElementById(id);
