@@ -647,7 +647,7 @@ $("plan-list").innerHTML = PLAN.map(r => {
   if (r.exam) return `<li class="day exam${cls}">${dt(r.date)}<div class="bd">${now}<h3>Pharmacy CBT</h3><p>APPSC screening test · FN 09:30–12:30 · 150 MCQs</p></div></li>`;
   if (r.weekly) return `<li class="day week${cls}">${dt(r.date)}<div class="bd">${now}<h3>Weekly test</h3><p>30 questions on all of the week's topics: 10 easy, 10 medium, 10 difficult.</p>${r.oneToOne ? `<p class="o2o">One-to-one interactive sessions on selected slots · ${r.oneToOne}</p>` : ""}</div></li>`;
   if (r.mock) return `<li class="day mock${cls}">${dt(r.date)}<div class="bd">${now}<h3>Mock test ${r.mock}</h3><p>Full-length CBT as per APPSC guidelines, on an APPSC-style interface</p></div></li>`;
-  if (r.topics) return `<li class="day${cls}">${dt(r.date)}<div class="bd">${now}<ul>${r.topics.map(t => `<li>${t}</li>`).join("")}</ul><span class="tag">Daily test</span>${r.free ? `<span class="tag free">Free with registration</span>` : ""}</div></li>`;
+  if (r.topics) return `<li class="day${cls}">${dt(r.date)}<div class="bd">${now}<ul>${r.topics.map(t => `<li>${t}</li>`).join("")}</ul><span class="tag">Daily test</span>${r.free ? `<span class="tag free">Free trial</span>` : ""}</div></li>`;
   return `<li class="day rest${cls}">${dt(r.date)}<div class="bd">${now}No scheduled test</div></li>`;
 }).join("");
 // The plan rows shift the page after load, so re-land on a #section link.
