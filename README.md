@@ -2,22 +2,11 @@
 
 Interactive one-page brochure for the Pharmakaksha batch for the APPSC Assistant Professor (Pharmacy) screening test (CBT, 3 December 2026, 09:30–12:30).
 
-It has a countdown to the exam, a +3 / −1 score calculator with category cut-offs, a guessing guide, the selection steps, the subjects covered and a WhatsApp enrol button. It is a single static `index.html`, so no build step is needed.
+It has a countdown to the exam, an index bar, the selection steps, a +3 / −1 score calculator, a guessing guide, posts by university, what the batch includes, the subjects, a day-by-day study plan, fees with offers, contact details and social links. It is a single static `index.html`, so no build step is needed.
 
-## Before sharing: fill in the batch details
+## Editing the details
 
-Open `index.html`, find `const CONFIG` near the bottom and fill in the values. Anything left as `""` shows as **TBA** on the page.
-
-```js
-const CONFIG = {
-  fee: "₹4,999",
-  offer: "Early-bird ₹3,999 till 31 Oct",
-  batchStart: "20 Oct 2026",
-  timings: "Mon–Sat, 7–9 PM",
-  whatsapp: "https://www.whatsapp.com/channel/0029VbDs5dyIN9ipjEeNYg3x",
-  exam: "2026-12-03T09:30:00+05:30"
-};
-```
+Open `index.html` and find `const CONFIG` near the bottom. It holds the fee and offers, the registration close date, batch start, contact links (WhatsApp channel, WhatsApp chat, email), the share message and the Cloudflare analytics token. The day-by-day study plan is the `PLAN` list a little further down.
 
 ## Publish on GitHub Pages
 
@@ -30,7 +19,7 @@ const CONFIG = {
    git remote add origin https://github.com/ajreddys/ap-asst-prof-pharmacy.git
    git push -u origin main
    ```
-3. In the repository, go to **Settings → Pages**, set **Source = Deploy from a branch**, branch `main`, folder `/ (root)`.
+3. In the repository, go to **Settings → Pages** and set **Source = GitHub Actions**. The workflow in `.github/workflows/deploy.yml` publishes on every push to `main`.
 4. The page is live in a minute or two at `https://ajreddys.github.io/ap-asst-prof-pharmacy/`.
 
 ### Custom domain: apur26.pharmakaksha.com
@@ -40,13 +29,9 @@ The `CNAME` file in this folder already contains `apur26.pharmakaksha.com`.
 2. In the repository, go to **Settings → Pages**, enter `apur26.pharmakaksha.com` as the **Custom domain** and save.
 3. Once the DNS check passes, tick **Enforce HTTPS**.
 
-### Optional: link preview image
+### Link preview image
 
-WhatsApp and Telegram show a preview card when the link is shared. To add an image, put a 1200×630 `og-image.jpg` in this folder and add this line inside `<head>` (it needs the full URL):
-
-```html
-<meta property="og:image" content="https://apur26.pharmakaksha.com/og-image.jpg">
-```
+`og-image.jpg` (1200×630) is the preview card WhatsApp and Telegram show when the link is shared. The `og:image` tag in `<head>` points to it by full URL.
 
 ## Files
 
@@ -56,5 +41,6 @@ WhatsApp and Telegram show a preview card when the link is shared. To add an ima
 | `logo.jpg` | Pharmakaksha logo, used as the favicon |
 | `CNAME` | The custom domain `apur26.pharmakaksha.com` |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are |
+| `og-image.jpg` | Link preview card |
 
 Exam facts come from the APPSC web note dated 05.10.2026 and the AP state universities' recruitment notifications. Pharmacy posts: AU 10, Krishna 6, ANU 4, Adikavi Nannaya 4, SVU 4, SKU 1 (29). Recheck them if APPSC updates the schedule.
